@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="carousel">
+    <ul class="slider">
+      <li> <div class="first"></div></li>
+      <li class="photo" [style.left] = "position + 'px'" *ngFor="let photo of photoes"><img src = "{{photo}}" ></li>
+      <li><div class="second"></div></li>
+    </ul>
+  </div>
+  <div class="buttons">
+    <button class="button" *ngFor="let i = index of photoes" (click)="onSetPhoto(i)" [id]="i"></button>
+  </div>
+</div>
